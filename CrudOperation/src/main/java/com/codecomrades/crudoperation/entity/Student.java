@@ -1,9 +1,7 @@
 package com.codecomrades.crudoperation.entity;
 
 import com.fasterxml.jackson.annotation.JsonTypeId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -13,8 +11,14 @@ public class Student {
 
     @Id
     private long id;
+
     private String name;
     private int age;
+    @OneToMany (cascade = CascadeType.)
+    private List<Teacher>Tl;
+
+
+
 
     public long getId() {
         return id;

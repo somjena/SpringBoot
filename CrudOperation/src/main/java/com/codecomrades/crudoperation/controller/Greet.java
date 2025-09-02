@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 public class Greet {
     @Autowired
-    Service service;
+      Service service;
     @PostMapping("/save")
     public String register(@RequestBody Student student){
         service.save(student);
